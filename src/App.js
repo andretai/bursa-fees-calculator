@@ -1,26 +1,32 @@
 import React from 'react';
 import './App.css';
 import { Button, Grid, ListItem, ListItemIcon, ListItemText, Paper, Step, Stepper, StepLabel, StepContent, Typography } from '@material-ui/core';
-import { Business, MenuBook } from '@material-ui/icons';
+import { MenuBook } from '@material-ui/icons';
 import BuySellCard from './BuySellCard';
 import Header from './Header';
 
 function App() {
 
   const [x, setX] = React.useState(0);
+  const [addX, setAddX] = React.useState(0);
   const [y, setY] = React.useState(0);
+  const [addY, setAddY] = React.useState(0);
   const [lots, setLots] = React.useState(0);
 
   const stepsContent = [
     {
       val: x,
+      addVal: addX,
       type: 'Bought',
-      setTotal: setX
+      setTotal: setX,
+      setAdd: setAddX
     },
     {
       val: y,
+      addVal: addY,
       type: 'Sold',
-      setTotal: setY
+      setTotal: setY,
+      setAdd: setAddY
     }
   ];
 
@@ -72,7 +78,7 @@ function App() {
                 <StepContent>
                   <Typography>{getStepContent(index)}</Typography>
                   {
-                    index < 2 ? <BuySellCard type={stepsContent[index].type} lots={lots} setLots={setLots} setTotal={stepsContent[index].setTotal}/>
+                    index < 2 ? <BuySellCard type={stepsContent[index].type} lots={lots} setLots={setLots} setTotal={stepsContent[index].setTotal} setAdd={stepsContent[index].setAdd}/>
                     : null
                   }
                   {
@@ -84,8 +90,8 @@ function App() {
                         </ListItemIcon>
                         <ListItemText primary="Summary" secondary="Transactions"/>
                       </ListItem>
-                      <Typography>Bought {lots} lots at RM {stepsContent[0].val.toFixed(2)}</Typography>
-                      <Typography>Sold {lots} lots at RM {stepsContent[1].val.toFixed(2)}</Typography>
+                      <Typography>Bought {lots} lots at {(stepsContent[0].addVal+stepsContent[0].val).toFixed(2)} for shares worth {stepsContent[0].val.toFixed(2)}</Typography>
+                      <Typography>Sold {lots} lots at {(-stepsContent[1].addVal+stepsContent[1].val).toFixed(2)} for shares worth {stepsContent[1].val.toFixed(2)}</Typography>
                     </Paper> : null
                   }
                   <div style={{ marginTop: '15px' }}>
