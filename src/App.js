@@ -3,7 +3,6 @@ import './App.css';
 import { Button, Grid, ListItem, ListItemIcon, ListItemText, Paper, Step, Stepper, StepLabel, StepContent } from '@material-ui/core';
 import { MenuBook } from '@material-ui/icons';
 import BuySellCard from './BuySellCard';
-import Header from './Header';
 import Output from './Output';
 
 function App() {
@@ -59,7 +58,6 @@ function App() {
       <Grid item xs={false} sm={2} md={3}/>
       <Grid item container xs={12} sm={8} md={6} justify="center">
         <Grid item xs={12}>
-          <Header />
           <Stepper activeStep={activeStep} orientation="vertical">
             {steps.map((label, index) => (
               <Step key={label}>
@@ -108,9 +106,9 @@ function App() {
                   lots={lots}
                 />
                 <div style={{ marginTop: '15px' }}>
-                  <Button variant="contained" color="primary" style={{ marginRight: '10px' }}>
+                  {/* <Button variant="contained" color="primary" style={{ marginRight: '10px' }}>
                     Save
-                  </Button>
+                  </Button> */}
                   <Button variant="outlined" color="secondary" onClick={handleReset}>
                     Reset
                   </Button>

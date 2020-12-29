@@ -45,7 +45,7 @@ const Output = (props) => {
       <ListItem>
         <ListItemText
           primary="P/L (%)"
-          secondary={`${profitLoss} (${profitLossRate.toFixed(2)}%)`}
+          secondary={`${profitLoss.toFixed(2)} (${profitLossRate.toFixed(2)}%)`}
         />
         <ListItemIcon><MonetizationOn color={profitLoss > 0 ? 'primary' : 'secondary' }/></ListItemIcon>
       </ListItem>
