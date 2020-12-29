@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Button, Grid, ListItem, ListItemIcon, ListItemText, Paper, Step, Stepper, StepLabel, StepContent, Typography } from '@material-ui/core';
+import { Button, Grid, ListItem, ListItemIcon, ListItemText, Paper, Step, Stepper, StepLabel, StepContent } from '@material-ui/core';
 import { MenuBook } from '@material-ui/icons';
 import BuySellCard from './BuySellCard';
 import Header from './Header';

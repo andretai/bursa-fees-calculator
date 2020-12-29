@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Grid, ListItem, ListItemIcon, ListItemText, Typography } from '@material-ui/core'
+import { Accordion, AccordionDetails, AccordionSummary, Grid, ListItem, ListItemText, Typography } from '@material-ui/core'
 import { ExpandMore } from '@material-ui/icons';
 
 const AssociatedFees = () => {
