@@ -1,5 +1,5 @@
 import React from 'react';
-import feesConstants from './fees';
+import feesConstants from './Fees';
 import { Button, Card, CardHeader, CardContent, CardActions, Grid, ListItem, ListItemIcon, ListItemText, TextField, Typography } from '@material-ui/core';
 import { ArrowRight, Input } from '@material-ui/icons';
 import AssociatedFees from './AssociatedFees';
@@ -66,7 +66,7 @@ function BuySellCard(props) {
           <Grid item xs={12} sm={6}>
             <TextField 
               name="lots" 
-              label="Lots (100 units / Lot)" 
+              label="Lots (x100 units)" 
               type="number" 
               value={lots === 0 ? '' : lots}
               disabled={(type === 'Sold' && lots) ? true : false}

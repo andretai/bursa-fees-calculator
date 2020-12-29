@@ -56,8 +56,8 @@ function App() {
 
   return (
     <Grid container>
-      <Grid item xs={false} sm={2}/>
-      <Grid item container xs={12} sm={8} justify="center">
+      <Grid item xs={false} sm={2} md={3}/>
+      <Grid item container xs={12} sm={8} md={6} justify="center">
         <Grid item xs={12}>
           <Header />
           <Stepper activeStep={activeStep} orientation="vertical">
@@ -120,7 +120,7 @@ function App() {
           </Stepper>
         </Grid>
       </Grid>
-      <Grid item xs={false} sm={2}/>
+      <Grid item xs={false} sm={2} md={3}/>
     </Grid>
   );
 }

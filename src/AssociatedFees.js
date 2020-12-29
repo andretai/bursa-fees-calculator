@@ -33,7 +33,7 @@ const AssociatedFees = () => {
                 secondary="0.06 * Broker Fee"/>
             </ListItem>
           </Grid>
-          <Grid item xs={12} sm={6} style={{ marginTop: '15px' }}>
+          <Grid item xs={12} style={{ marginTop: '15px' }}>
             <Typography variant="caption">* P = Price, </Typography>
             <Typography variant="caption">* L = Lots, </Typography>
             <Typography variant="caption">* S = Spent</Typography>
