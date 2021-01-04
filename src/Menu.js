@@ -23,7 +23,7 @@ const Menu = (props) => {
         <ListItemText primary="source code" secondary="github"/>
       </ListItem>
       <Divider/>
-      <Typography variant="subtitle2" style={{ textAlign: 'center', marginTop: '30px' }}>HI, VISITOR {count}!</Typography>
+      {/* <Typography variant="subtitle2" style={{ textAlign: 'center', marginTop: '30px' }}>HI, VISITOR {count}!</Typography> */}
     </List>
   )
 }
